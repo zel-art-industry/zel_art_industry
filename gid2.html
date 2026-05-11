@@ -103,19 +103,7 @@
   </div>
   <script>
     setTimeout(function() {
-      var ua = navigator.userAgent;
-      var isInstagramBrowser = ua.indexOf('Instagram') > -1;
-      
-      if (isInstagramBrowser) {
-        window.location = "https://www.instagram.com/p/DYMwXJ9E7I9/";
-      } else {
-        var appUrl = "instagram://media?id=DYMwXJ9E7I9";
-        var webUrl = "https://www.instagram.com/p/DYMwXJ9E7I9/";
-        window.location = appUrl;
-        setTimeout(function() {
-          window.location = webUrl;
-        }, 600);
-      }
+      window.location.href = "https://www.instagram.com/p/DYMwXJ9E7I9/";
     }, 1000);
   </script>
 </body>

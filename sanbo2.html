@@ -98,19 +98,7 @@
   </div>
   <script>
     setTimeout(function() {
-      var ua = navigator.userAgent;
-      var isInstagramBrowser = ua.indexOf('Instagram') > -1;
-      
-      if (isInstagramBrowser) {
-        window.location = "https://www.instagram.com/p/DYMwcw_E1kv/";
-      } else {
-        var appUrl = "instagram://media?id=DYMwcw_E1kv";
-        var webUrl = "https://www.instagram.com/p/DYMwcw_E1kv/";
-        window.location = appUrl;
-        setTimeout(function() {
-          window.location = webUrl;
-        }, 600);
-      }
+      window.location.href = "https://www.instagram.com/p/DYMwcw_E1kv/";
     }, 1000);
   </script>
 </body>
