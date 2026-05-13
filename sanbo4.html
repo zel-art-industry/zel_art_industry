@@ -98,8 +98,16 @@
   </div>
   <script>
     setTimeout(function() {
-      window.location.href = "https://www.instagram.com/p/DYMwcw_E1kv/";
-    }, 1500);
+      var appUrl = "instagram://media?id=DYMwcw_E1kv";
+      var webUrl = "https://www.instagram.com/p/DYMwcw_E1kv/";
+      var fallbackTimer = setTimeout(function() {
+        window.location.href = webUrl;
+      }, 1500);
+      window.location.href = appUrl;
+      window.addEventListener("blur", function() {
+        clearTimeout(fallbackTimer);
+      });
+    }, 1000);
   </script>
 </body>
 </html>
